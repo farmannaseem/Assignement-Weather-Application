@@ -17,6 +17,7 @@ To get started with this project:
    git clone https://github.com/farmannaseem/Assignement-Weather-Application.git
 
 2. install dependencies
+
    npm install
    
 4. run the application
