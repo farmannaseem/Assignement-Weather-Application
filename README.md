@@ -23,7 +23,4 @@ To get started with this project:
 4. run the application
 
     npm run dev
-Technologies Used
-React
-Bootstrap (for styling)
-OpenWeatherMap API
+
