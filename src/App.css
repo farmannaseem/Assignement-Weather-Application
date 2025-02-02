@@ -1,0 +1,183 @@
+/* Reset default margin and padding */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #373841, #98c5e9); /* Added gradient background */
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-attachment: fixed; /* Keeps the background fixed when scrolling */
+  flex-direction: column; /* Ensures that the content is stacked vertically */
+}
+
+h1 {
+  text-align: left;
+  color: #fff;
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+  text-transform: uppercase; /* Adds a modern look with uppercase text */
+  letter-spacing: 2px; /* Spacing for a cleaner design */
+  font-weight: 600;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); /* Subtle shadow for a 3D effect */
+}
+
+form {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap; /* Ensures the form is flexible and responsive */
+  width: 100%;
+  max-width: 550px;
+  margin-bottom: 30px;
+  align-items: center; /* Ensures the form stays centered */
+}
+
+input,
+button {
+  padding: 15px;
+  font-size: 16px;
+  border-radius: 10px;
+  width: 100%;
+  max-width: 250px;
+  border: 2px solid #fff;
+  outline: none;
+  box-sizing: border-box;
+  transition: all 0.3s ease-in-out; /* Smooth transition on focus */
+}
+
+input {
+  background-color: #f1f1f1;
+  color: #333;
+  justify-content: center;
+  font-weight: 500;
+}
+
+button {
+  background-color: #ffd700; /* Bright yellow button */
+  color: #fff;
+  cursor: pointer;
+  font-weight: bold;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow for button */
+}
+
+button:hover {
+  background-color: #ffbb00; /* Darker shade when hovered */
+  transform: translateY(-2px); /* Slight lift effect */
+}
+
+input:focus,
+button:focus {
+  box-shadow: 0 0 10px rgba(255, 215, 0, 0.8); /* Focus effect with golden glow */
+}
+
+input::placeholder {
+  color: #888;
+  font-style: italic;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 600px) {
+  body {
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+
+  form {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px; /* Increased gap between input and button for mobile */
+  }
+
+  h1 {
+    font-size: 2rem; /* Adjust header size for smaller screens */
+    text-align: center; /* Center the header on small screens */
+  }
+
+  input,
+  button {
+    max-width: 100%; /* Make input and button take full width on mobile */
+    padding: 12px; /* Reduce padding for smaller screens */
+    font-size: 14px; /* Slightly smaller font size */
+  }
+
+  .forecast-day {
+    padding: 15px;
+    font-size: 0.9rem; /* Adjust font size for smaller devices */
+  }
+
+  .weather-info .forecast {
+    display: grid;
+    grid-template-columns: 1fr; /* Stack forecast items on mobile */
+    grid-gap: 15px; /* Reduced gap between forecast items */
+    margin-top: 20px;
+    overflow-x: hidden; /* Prevent horizontal overflow on small screens */
+    padding-bottom: 20px;
+  }
+}
+
+/* Container for search bar */
+.search-bar-container {
+  display: flex;
+  justify-content: center; /* Centers the search bar */
+  align-items: center;
+  width: 100%;
+}
+
+div {
+  text-align: center;
+  margin-top: 20px;
+}
+.weather-info .forecast {
+  display: flex; /* Use flexbox for horizontal layout */
+  gap: 10px;
+  margin-top: 10px;
+  overflow-x: auto; /* Allow horizontal scrolling */
+  padding-bottom: 10px;
+  flex-wrap: nowrap; /* Prevent wrapping by default */
+}
+
+.forecast-day {
+  padding: 20px;
+  background-color: #d1b3b3;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(184, 169, 169, 0.1);
+  text-align: center;
+  min-width: 250px; /* Ensure cards have a minimum width */
+  flex: 0 0 auto; /* Prevent flex items from shrinking or growing */
+}
+
+.forecast-day img {
+  width: 60px; /* Adjust size of the weather icon */
+  height: 60px;
+}
+
+.forecast-day h3 {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+
+.forecast-day p {
+  margin: 5px 0;
+  font-size: 1rem;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  .weather-info .forecast {
+    flex-direction: column; /* Switch to column layout on smaller screens */
+    gap: 15px; /* Reduced gap for smaller screens */
+    overflow-x: visible; /* Disable horizontal scrolling */
+  }
+
+  .forecast-day {
+    min-width: 100%; /* Allow cards to take full width in column layout */
+    flex: 1 1 auto; /* Let cards grow and take available space */
+  }
+}
