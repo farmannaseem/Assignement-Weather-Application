@@ -3,7 +3,7 @@
 This is a weather application built with React, designed to help users check the weather conditions and forecast for any city. 
 
 
-![Weather Application Screenshot](ScreenShot(91).png)
+![Weather Application Screenshot](ScreenShot.png)
 
 
 ## Features
