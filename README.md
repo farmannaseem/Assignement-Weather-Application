@@ -2,6 +2,10 @@
 
 This is a weather application built with React, designed to help users check the weather conditions and forecast for any city. 
 
+
+![Weather Application Screenshot](assets/screenshot.png)
+
+
 ## Features
 
 - Get current weather details for a city
