@@ -21,4 +21,5 @@ To get started with this project:
    npm install
    
 4. run the application
+
     npm run dev
